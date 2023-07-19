@@ -1,0 +1,6 @@
+import pandas as pd
+
+data = pd.read_csv('employee_data.csv')
+data['Total_Compensation'] = data['Salaries'] + data['Overtime'] + data['H/D']
+print(data['Total_Compensation'])
+data.to_csv('employee_data_with_total_compensation.csv', index=False)
